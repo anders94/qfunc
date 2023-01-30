@@ -1,0 +1,31 @@
+{
+  "name": "function-queue",
+  "version": "0.0.1",
+  "description": "Node.js queue of async/await functions that execute sequentially.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anders94/function-queue.git"
+  },
+  "keywords": [
+    "node.js",
+    "node",
+    "function",
+    "queue",
+    "sequential",
+    "serial",
+    "execution"
+  ],
+  "author": "Anders Brownworth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anders94/function-queue/issues"
+  },
+  "homepage": "https://github.com/anders94/function-queue#readme"
+}
