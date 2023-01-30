@@ -1,6 +1,6 @@
 {
   "name": "qfunc",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Node.js queue of async/await functions that execute sequentially.",
   "main": "index.js",
   "directories": {

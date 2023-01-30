@@ -39,16 +39,16 @@ const { Queue } = require('qfunc');
 const queue = new Queue();
 
 queue.enqueue(async () => {
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Promise(resolve => setTimeout(resolve, 500));
     console.log('A');
 });
 
 queue.enqueue(async () => {
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Promise(resolve => setTimeout(resolve, 500));
     console.log('B');
 });
 
-queue.length();
+console.log(queue.length());
 ```
 In the above example, the queue length will be `1` because the first function will already have been dequeued and started leaving only one function on the queue.
 
@@ -60,16 +60,16 @@ const { Queue } = require('qfunc');
 const queue = new Queue();
 
 queue.enqueue(async () => {
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Promise(resolve => setTimeout(resolve, 500));
     console.log('A');
 });
 
 queue.enqueue(async () => {
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Promise(resolve => setTimeout(resolve, 500));
     console.log('B');
 });
 
-queue.isEmpty();
+console.log(queue.isEmpty());
 ```
 
 The above example results in `false`.
@@ -112,6 +112,30 @@ setTimeout(() => {
 	clearInterval(i);
     }, 1100);
 });
+```
+
+Output:
+```
+queue 1
+start 1
+queue 2
+queue 3
+2
+2
+2
+end 1
+start 2
+1
+1
+1
+1
+end 2
+start 3
+0
+0
+0
+0
+end 3
 ```
 
 License
