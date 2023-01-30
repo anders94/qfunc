@@ -72,9 +72,9 @@ queue.enqueue(async () => {
 console.log(queue.isEmpty());
 ```
 
-The above example results in `false`.
+The above example results in `false` because the queue is not empty.
 
-The implementation is super simple and far fewer lines than even this `README.md`.
+The implementation is super simple and far fewer lines than even this `README.md`. See what I mean by looking here: https://github.com/anders94/qfunc/blob/main/lib/index.js
 
 Here's a more expressive example that uses an interval to continually show the length of the queue and prove that things operate in order:
 
