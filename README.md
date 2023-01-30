@@ -77,3 +77,45 @@ queue.isEmpty();
 The above example results in `false`.
 
 The implementation is super simple and far fewer lines than even this `README.md`.
+
+Here's a more expressive example that uses an interval to continually show the length of the queue and prove that things operate in order:
+
+```
+const { Queue } = require('qify');
+
+const timeout = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+};
+
+const queue = new Queue();
+
+const i = setInterval(() => console.log(queue.length()), 250);
+
+console.log('queue 1');
+queue.enqueue(async () => {
+    console.log('start 1');
+    await timeout(1000);
+    console.log('end 1');
+});
+
+console.log('queue 2');
+queue.enqueue(async () => {
+    console.log('start 2');
+    await timeout(1000);
+    console.log('end 2');
+});
+
+setTimeout(() => {
+    console.log('queue 3');
+    queue.enqueue(async () => {
+	console.log('start 3');
+	await timeout(1000);
+	console.log('end 3');
+	clearInterval(i);
+    }, 1100);
+});
+```
+
+License
+-------
+MIT
