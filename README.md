@@ -5,6 +5,7 @@ Pronounced "queue if eye".
 
 Queue a number of async functions which get executed sequentially.
 
+Example:
 ```
 const { Queue } = require('qify');
 
@@ -19,7 +20,7 @@ queue.enqueue(async () => {
     await new Promise(resolve => setTimeout(resolve, 500));
     console.log('B');
 });
-```js
+```
 
 Output:
 
