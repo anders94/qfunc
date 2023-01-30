@@ -4,7 +4,7 @@ qfunc
 Queue a number of async functions which get executed sequentially.
 
 Example:
-```
+```js
 const { Queue } = require('qfunc');
 
 const queue = new Queue();
@@ -33,7 +33,7 @@ This is useful when you want to asyncronously add functions to a queue without w
 
 You can see the depth of the queue by reading `queue.length()` like this:
 
-```
+```js
 const { Queue } = require('qfunc');
 
 const queue = new Queue();
@@ -54,7 +54,7 @@ In the above example, the queue length will be `1` because the first function wi
 
 You can also read `isEmpty()` which returns a boolean:
 
-```
+```js
 const { Queue } = require('qfunc');
 
 const queue = new Queue();
@@ -78,7 +78,7 @@ The implementation is super simple and far fewer lines than even this `README.md
 
 Here's a more expressive example that uses an interval to continually show the length of the queue and prove that things operate in order:
 
-```
+```js
 const { Queue } = require('qfunc');
 
 const timeout = (ms) => {
