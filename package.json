@@ -1,5 +1,5 @@
 {
-  "name": "function-queue",
+  "name": "qify",
   "version": "0.0.1",
   "description": "Node.js queue of async/await functions that execute sequentially.",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anders94/function-queue.git"
+    "url": "git+https://github.com/anders94/qify.git"
   },
   "keywords": [
     "node.js",
@@ -25,7 +25,7 @@
   "author": "Anders Brownworth",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anders94/function-queue/issues"
+    "url": "https://github.com/anders94/qify/issues"
   },
-  "homepage": "https://github.com/anders94/function-queue#readme"
+  "homepage": "https://github.com/anders94/qify#readme"
 }
